@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:0}
+
+spring:
+  data:
+    mongodb:
+      #uri: mongodb://microservice-mongo5:27017/db_bootcamp
+      uri: mongodb://localhost:27017/db_bootcamp
+
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://servicio-eureka-server:8761/eureka
+      defaultZone: http://localhost:8761/eureka
+
+endpoint:
+  #bankAccount: http://microservice-gateway:8090/api/bankAccount
+  bankAccount: http://localhost:8090/api/bankAccount
+  #bankCredit: http://microservice-gateway:8090/api/bankCredit
+  bankCredit: http://localhost:8090/api/bankCredit

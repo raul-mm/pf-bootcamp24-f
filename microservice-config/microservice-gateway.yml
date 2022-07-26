@@ -1,0 +1,54 @@
+server:
+  port: 8090
+
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://servicio-eureka-server:8761/eureka
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: microservice-client
+          uri: lb://microservice-client
+          predicates:
+            - Path= /api/client/**
+          filters:
+            - StripPrefix=2
+
+        - id: microservice-product-bank
+          uri: lb://microservice-product-bank
+          predicates:
+            - Path= /api/productBank/**
+          filters:
+            - StripPrefix=2
+
+        - id: microservice-bank-account
+          uri: lb://microservice-bank-account
+          predicates:
+            - Path= /api/bankAccount/**
+          filters:
+              - StripPrefix=2
+
+        - id: microservice-credit
+          uri: lb://microservice-credit
+          predicates:
+            - Path= /api/bankCredit/**
+          filters:
+            - StripPrefix=2
+
+        - id: microservice-movement
+          uri: lb://microservice-movement
+          predicates:
+            - Path= /api/movement/**
+          filters:
+            - StripPrefix=2
+
+        - id: microservice-card-debit
+          uri: lb://microservice-card-debit
+          predicates:
+            - Path= /api/cardDebit/**
+          filters:
+            - StripPrefix=2

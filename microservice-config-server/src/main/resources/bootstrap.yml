@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+    user:
+      name: jair
+      password: jair123
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/Rivero13/microservice-config.git
+          search-paths: /
+          default-label: "bootcamp1"
