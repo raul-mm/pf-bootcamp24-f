@@ -3,26 +3,24 @@ package com.bootcamp.ms.commons.entity;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.LocalDate;
 
-@Document(collection = "walletBC")
+@Document(collection = "requestQueue")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-public class WalletBc {
+public class RequestQueueBc {
 
     @Id
     private String id;
-    private String type;
     private LocalDate date;
-    private Double amount;
-    private String idClient;
-    private Client client;
-    private String numberDocument;
-    private String numberPhone;
-    private String idCardDebit;
-    private CardDebit cardDebit;
+    private double amount;
+    private String typePay;
+    private int flag;
+    private String idWallteBc;
+    private WalletBc walletBc;
+
 }

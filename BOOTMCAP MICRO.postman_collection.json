@@ -1,0 +1,716 @@
+{
+	"info": {
+		"_postman_id": "3b6d899a-598c-49d6-80f2-f0bfcc323824",
+		"name": "BOOTMCAP MICRO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PROYECTO BOOTCAMP",
+			"item": [
+				{
+					"name": "CLIENTES",
+					"item": [
+						{
+							"name": "LIstar Clientes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/client/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"client",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear cliente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Raul\",\r\n    \"lastName\":\"Meza\",\r\n    \"documentNumber\": \"73994012\",\r\n    \"age\":\"28\",\r\n    \"type\":\"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8002/client/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"client",
+										"save"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PRODUCTOS BANK",
+					"item": [
+						{
+							"name": "Crear Productos Bank",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\":\"ahorro\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/productBank/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"productBank",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Productos bak",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8003/productBank/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"productBank",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "BANK ACCOUNT",
+					"item": [
+						{
+							"name": "Listar bank Account",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8004/bankAccount/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8004",
+									"path": [
+										"bankAccount",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CheckBalance",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8004/bankAccount/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8004",
+									"path": [
+										"bankAccount",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear Bank Account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\":\"Ahorro\",\r\n    \"lastName\":\"Meza\",\r\n    \"documentNumber\": \"73994012\",\r\n    \"age\":\"28\",\r\n    \"type\":\"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8004/bankAccount/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8004",
+									"path": [
+										"bankAccount",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "BANK CREDIT",
+					"item": [
+						{
+							"name": "Listar bank Credit",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8006/bankCredit/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8006",
+									"path": [
+										"bankCredit",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener bank Credit x id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8006/bankCredit/62c72e2eb8b1a87f2898eaba",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8006",
+									"path": [
+										"bankCredit",
+										"62c72e2eb8b1a87f2898eaba"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crear tarjetas de credito",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"Personal\",\r\n    \"amount\": \"0\",\r\n    \"idProduct\": \"62d6e6eea9d79e4479b49a3c\",\r\n    \"idClient\": \"62d6e6c3a912b15b63bdec01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/bankCredit/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"bankCredit",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar saldo disponible limite de credito",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/bankCredit/getAvailableBalancesxcliente/62d6e6c3a912b15b63bdec01",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"bankCredit",
+										"getAvailableBalancesxcliente",
+										"62d6e6c3a912b15b63bdec01"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar pago fecha expirada",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/bankCredit/checkValidateDateExpiredCreditxClient/62d6e6c3a912b15b63bdec01",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"bankCredit",
+										"checkValidateDateExpiredCreditxClient",
+										"62d6e6c3a912b15b63bdec01"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "MOVIMIENTO",
+					"item": [
+						{
+							"name": "Listar Movimientos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/movement/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movement",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Movimientos ultimos 10",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8005/movement/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"movement",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Movimientos por bankAccount",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8005/movement/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"movement",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear Movimientos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"Crédito\",\r\n    \"description\": \"C\",\r\n    \"amount\": \"200\",\r\n    \"idBankCredit\": \"62c72e2eb8b1a87f2898eaba\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8005/movement/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"movement",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "MONEDERO",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "MONEDERO BOOTCOIN - PROYECTO FINAL",
+					"item": [
+						{
+							"name": "TASAS",
+							"item": [
+								{
+									"name": "LIstar TASAS BC",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9010/tasasBc/all",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9010",
+											"path": [
+												"tasasBc",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Crear tasas BC",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoCambio\":3.90,\r\n    \"tipo\":\"COMPRA\",\r\n    \"flag\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9010/tasasBc/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9010",
+											"path": [
+												"tasasBc",
+												"create"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "MAESTRO",
+							"item": [
+								{
+									"name": "LIstar TASAS BC",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9010/tasasBc/all",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9010",
+											"path": [
+												"tasasBc",
+												"all"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "MONEDERO",
+							"item": [
+								{
+									"name": "Obtener por idWallteBc",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9030/kafka/findAllFindIdWalletBc/62e056bcb91e2c4395380586",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9030",
+											"path": [
+												"kafka",
+												"findAllFindIdWalletBc",
+												"62e056bcb91e2c4395380586"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "crear monedero bootcoin",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"amount\": 0,\r\n    \"idClient\": \"62d6e6c3a912b15b63bdec01\",\r\n    \"numberPhone\":\"935652488\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9010/kafka/publish",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9010",
+											"path": [
+												"kafka",
+												"publish"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Enviar solicitud para cambiar",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"amount\": 100,\r\n    \"typePay\": \"YANKI\",\r\n    \"flag\":1,\r\n    \"idWallteBc\":\"62e056bcb91e2c4395380586\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9020/kafka/publish",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9020",
+											"path": [
+												"kafka",
+												"publish"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Aprueba solicitud de cambio",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"flag\": 1,\r\n    \"requestQueueBc\": {\r\n         \"id\": \"62e08a302720f27d35f64c02\",\r\n        \"date\": \"2022-07-07\",\r\n        \"amount\": 5,\r\n        \"typePay\": \"YANKI\",\r\n        \"flag\": 1,\r\n        \"idWallteBc\": \"62e056bcb91e2c4395380586\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9030/kafka/publish",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9030",
+											"path": [
+												"kafka",
+												"publish"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Obtener transacciones por idWallteBc",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9030/kafka/findAllFindIdWalletBc/62e056bcb91e2c4395380586",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9030",
+											"path": [
+												"kafka",
+												"findAllFindIdWalletBc",
+												"62e056bcb91e2c4395380586"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Obtener transaccion por numero trasnf",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9030/kafka/findAllFindIdWalletBc/62e056bcb91e2c4395380586",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9030",
+											"path": [
+												"kafka",
+												"findAllFindIdWalletBc",
+												"62e056bcb91e2c4395380586"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "VENDEDOR",
+							"item": [
+								{
+									"name": "LIstar USUARIO VEND BC",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9010/sellerUserBc/all",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9010",
+											"path": [
+												"sellerUserBc",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Crear USUARIO VENDEDOR BC",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoCambio\":3.90,\r\n    \"tipo\":\"COMPRA\",\r\n    \"flag\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9010/tasasBc/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9010",
+											"path": [
+												"tasasBc",
+												"create"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

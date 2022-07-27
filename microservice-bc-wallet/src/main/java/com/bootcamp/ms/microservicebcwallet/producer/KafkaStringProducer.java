@@ -23,15 +23,4 @@ public class KafkaStringProducer {
         this.kafkaTemplate.send("bootcamp-Topic", message);
     }
 
-    public void sendMessageUpdateAmount(WalletBc messaWallet){
-        LOGGER.info("Producing message for update amount {}", messaWallet);
-        LOGGER.info(messaWallet.getNumberDocument());
-        this.kafkaTemplate.send("bootcamp-Topic2", messaWallet);
-    }
-
-    public void sendMessageAssociateWithCardDebit(WalletBc messaWallet){
-        LOGGER.info("Producing message for associate with card debit {}", messaWallet);
-        this.kafkaTemplate.send("bootcamp-Topic3", messaWallet);
-    }
-
 }
